@@ -66,7 +66,7 @@ const DoctorCard = ({ doctor }) => {
           iconPosition="left"
           onClick={handleBookAppointment}
         >
-          Book Appointment
+          Цаг захиалах
         </Button>
       </div>
     </div>

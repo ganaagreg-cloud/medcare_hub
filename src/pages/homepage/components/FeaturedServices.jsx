@@ -5,74 +5,99 @@ import Image from '../../../components/AppImage';
 const FeaturedServices = () => {
   const [activeService, setActiveService] = useState(0);
 
+  // Services data pulled from services page
   const services = [
-  {
-    id: 1,
-    name: "Cardiology",
-    icon: "Heart",
-    description: "Comprehensive heart care with advanced diagnostic tools and treatment options for all cardiovascular conditions.",
-    image: "https://img.rocket.new/generatedImages/rocket_gen_img_16e68031a-1767382239991.png",
-    imageAlt: "Cardiologist in white coat examining heart monitor displaying ECG readings in modern medical facility with advanced cardiac equipment",
-    features: ["24/7 Emergency Care", "Advanced Diagnostics", "Minimally Invasive Procedures"],
-    color: "text-red-600",
-    bgColor: "bg-red-50"
-  },
-  {
-    id: 2,
-    name: "Orthopedics",
-    icon: "Bone",
-    description: "Expert treatment for bone, joint, and muscle conditions using the latest surgical and non-surgical techniques.",
-    image: "https://img.rocket.new/generatedImages/rocket_gen_img_1e7ec1171-1767106697996.png",
-    imageAlt: "Orthopedic surgeon in blue scrubs examining patient knee joint with physical therapist in bright rehabilitation room with exercise equipment",
-    features: ["Sports Medicine", "Joint Replacement", "Physical Therapy"],
-    color: "text-blue-600",
-    bgColor: "bg-blue-50"
-  },
-  {
-    id: 3,
-    name: "Pediatrics",
-    icon: "Baby",
-    description: "Compassionate care for children from infancy through adolescence with specialized pediatric expertise.",
-    image: "https://img.rocket.new/generatedImages/rocket_gen_img_1b8771074-1766904917627.png",
-    imageAlt: "Friendly female pediatrician in colorful scrubs with stethoscope examining smiling young child while parent watches in cheerful examination room",
-    features: ["Well-Child Visits", "Immunizations", "Developmental Screening"],
-    color: "text-purple-600",
-    bgColor: "bg-purple-50"
-  },
-  {
-    id: 4,
-    name: "Women\'s Health",
-    icon: "Heart",
-    description: "Comprehensive healthcare services for women at every stage of life, from adolescence through menopause.",
-    image: "https://img.rocket.new/generatedImages/rocket_gen_img_1e4d15f29-1766091505458.png",
-    imageAlt: "Female gynecologist in white coat consulting with pregnant woman patient in comfortable modern clinic room with ultrasound equipment",
-    features: ["Obstetrics", "Gynecology", "Prenatal Care"],
-    color: "text-pink-600",
-    bgColor: "bg-pink-50"
-  },
-  {
-    id: 5,
-    name: "Neurology",
-    icon: "Brain",
-    description: "Advanced diagnosis and treatment of neurological disorders with cutting-edge technology and expert care.",
-    image: "https://images.unsplash.com/photo-1666214273506-c2984f1d3301",
-    imageAlt: "Neurologist in white coat analyzing brain scan images on multiple computer monitors in high-tech neurology department with MRI equipment",
-    features: ["Stroke Care", "Epilepsy Treatment", "Memory Disorders"],
-    color: "text-indigo-600",
-    bgColor: "bg-indigo-50"
-  },
-  {
-    id: 6,
-    name: "Emergency Medicine",
-    icon: "AlertCircle",
-    description: "Round-the-clock emergency care with rapid response teams and state-of-the-art trauma facilities.",
-    image: "https://img.rocket.new/generatedImages/rocket_gen_img_1d6f1d24f-1767988677449.png",
-    imageAlt: "Emergency medical team in red trauma uniforms rushing patient on gurney through modern emergency department with medical equipment",
-    features: ["Trauma Center", "Critical Care", "Rapid Response"],
-    color: "text-red-600",
-    bgColor: "bg-red-50"
-  }];
-
+    {
+      id: 1,
+      name: "Мэдрэлийн эмчийн үзлэг",
+      icon: "Brain",
+      description: "Мэдрэлийн эмгэг, цус харвалт, толгойн өвчин зэрэг асуудлыг оношлох, эмчлэх үйлчилгээ.",
+      image: "https://img.rocket.new/generatedImages/rocket_gen_img_13238c809-1768133810608.png",
+      imageAlt: "Мэдрэлийн эмч өвчтөнтэй ярилцаж байгаа дүр зураг",
+      features: [
+        "Мэргэжлийн оношилгоо",
+        "Орчин үеийн эмчилгээ",
+        "Сэргээн засах эмчилгээ"
+      ],
+      color: "text-indigo-600",
+      bgColor: "bg-indigo-50"
+    },
+    {
+      id: 2,
+      name: "Уламжлалтын эмчийн үзлэг",
+      icon: "Leaf",
+      description: "Бариа засал, зүү төөнүүр, сүүн бариа зэрэг уламжлалт эмчилгээний аргууд.",
+      image: "https://img.rocket.new/generatedImages/rocket_gen_img_1989af7f9-1768282872616.png",
+      imageAlt: "Уламжлалт эмчилгээний өрөө",
+      features: [
+        "Бариа засал",
+        "Зүү төөнүүр",
+        "Сүүн бариа"
+      ],
+      color: "text-green-600",
+      bgColor: "bg-green-50"
+    },
+    {
+      id: 3,
+      name: "Зүрхний эмчийн үзлэг",
+      icon: "Heart",
+      description: "Зүрх судасны өвчлөлийг оношлох, эмчлэх иж бүрэн үйлчилгээ.",
+      image: "https://img.rocket.new/generatedImages/rocket_gen_img_1c0f02590-1763300608129.png",
+      imageAlt: "Зүрхний эмч зүрхний монитор шалгаж байгаа",
+      features: [
+        "Зүрхний ЭХО",
+        "ЭКГ шинжилгээ",
+        "Холтер бичлэг"
+      ],
+      color: "text-red-600",
+      bgColor: "bg-red-50"
+    },
+    {
+      id: 4,
+      name: "Сэргээн засах эмчийн үзлэг",
+      icon: "Activity",
+      description: "Үе мөч, булчин, мэдрэлийн эмгэгийг сэргээх физик эмчилгээ.",
+      image: "https://images.unsplash.com/photo-1624566329473-1fc35a4da8a3",
+      imageAlt: "Сэргээн засах эмчилгээний өрөө",
+      features: [
+        "Физик эмчилгээ",
+        "Парафин эмчилгээ",
+        "Цахилгаан соронзон ороолт"
+      ],
+      color: "text-blue-600",
+      bgColor: "bg-blue-50"
+    },
+    {
+      id: 5,
+      name: "Амбулаторын үзлэг",
+      icon: "Stethoscope",
+      description: "Амбулаторын үзлэг үнэгүй. Ерөнхий эрүүл мэндийн үзлэг, зөвлөгөө.",
+      image: "https://img.rocket.new/generatedImages/rocket_gen_img_1b1bf35aa-1765691113088.png",
+      imageAlt: "Эмч өвчтөнтэй ярилцаж байгаа",
+      features: [
+        "Үнэгүй үзлэг",
+        "Ерөнхий оношилгоо",
+        "Эмчийн зөвлөгөө"
+      ],
+      color: "text-purple-600",
+      bgColor: "bg-purple-50"
+    },
+    {
+      id: 6,
+      name: "Рентген оношилгоо",
+      icon: "Scan",
+      description: "Дижитал рентген зураг: цээж, нуруу, үе мөч, толгой зэрэг бүх төрлийн зураг.",
+      image: "https://img.rocket.new/generatedImages/rocket_gen_img_1e8f4b63d-1768282873650.png",
+      imageAlt: "Рентген аппарат",
+      features: [
+        "Цээжний зураг",
+        "Нурууны зураг",
+        "Үе мөчний зураг"
+      ],
+      color: "text-cyan-600",
+      bgColor: "bg-cyan-50"
+    }
+  ];
 
   const handlePrevious = () => {
     setActiveService((prev) => prev === 0 ? services?.length - 1 : prev - 1);
@@ -88,13 +113,13 @@ const FeaturedServices = () => {
         <div className="text-center mb-8 md:mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 text-secondary text-xs md:text-sm font-semibold mb-4">
             <Icon name="Stethoscope" size={16} />
-            <span>Our Medical Specialties</span>
+            <span>Манай эмнэлгийн үйлчилгээ</span>
           </div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3 md:mb-4">
-            Featured Healthcare Services
+            Онцлох эрүүл мэндийн үйлчилгээ
           </h2>
           <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive medical care across multiple specialties with board-certified physicians and advanced treatment options
+            Мэргэшсэн эмч нар, орчин үеийн эмчилгээний аргуудаар олон төрлийн эмнэлгийн иж бүрэн үйлчилгээ
           </p>
         </div>
 
@@ -107,8 +132,8 @@ const FeaturedServices = () => {
                   alt={services?.[activeService]?.imageAlt}
                   className="w-full h-full object-cover"
                   loading="lazy"
-                  decoding="async" />
-
+                  decoding="async"
+                />
               </div>
             </div>
 
@@ -121,7 +146,7 @@ const FeaturedServices = () => {
               </div>
 
               <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground">
-                {services?.[activeService]?.name} Department
+                {services?.[activeService]?.name}
               </h3>
 
               <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
@@ -129,14 +154,14 @@ const FeaturedServices = () => {
               </p>
 
               <div className="space-y-3">
-                <p className="text-sm font-semibold text-foreground">Key Services:</p>
+                <p className="text-sm font-semibold text-foreground">Үндсэн үйлчилгээ:</p>
                 <div className="grid grid-cols-1 gap-2">
-                  {services?.[activeService]?.features?.map((feature, index) =>
-                  <div key={index} className="flex items-center gap-3 p-3 rounded-lg bg-muted/50">
+                  {services?.[activeService]?.features?.map((feature, index) => (
+                    <div key={index} className="flex items-center gap-3 p-3 rounded-lg bg-muted/50">
                       <Icon name="CheckCircle2" size={18} className="text-secondary flex-shrink-0" />
                       <span className="text-sm text-foreground">{feature}</span>
                     </div>
-                  )}
+                  ))}
                 </div>
               </div>
 
@@ -144,28 +169,28 @@ const FeaturedServices = () => {
                 <button
                   onClick={handlePrevious}
                   className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 hover:bg-primary/20 text-primary flex items-center justify-center transition-colors"
-                  aria-label="Previous service">
-
+                  aria-label="Өмнөх үйлчилгээ"
+                >
                   <Icon name="ChevronLeft" size={20} />
                 </button>
                 <div className="flex-1 flex items-center gap-2">
-                  {services?.map((_, index) =>
-                  <button
-                    key={index}
-                    onClick={() => setActiveService(index)}
-                    className={`h-1.5 rounded-full transition-all duration-300 ${
-                    activeService === index ?
-                    'w-8 bg-primary' : 'w-1.5 bg-muted-foreground/30 hover:bg-muted-foreground/50'}`
-                    }
-                    aria-label={`Go to service ${index + 1}`} />
-
-                  )}
+                  {services?.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setActiveService(index)}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${
+                        activeService === index
+                          ? 'w-8 bg-primary' :'w-1.5 bg-muted-foreground/30 hover:bg-muted-foreground/50'
+                      }`}
+                      aria-label={`Үйлчилгээ ${index + 1} руу шилжих`}
+                    />
+                  ))}
                 </div>
                 <button
                   onClick={handleNext}
                   className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 hover:bg-primary/20 text-primary flex items-center justify-center transition-colors"
-                  aria-label="Next service">
-
+                  aria-label="Дараагийн үйлчилгээ"
+                >
                   <Icon name="ChevronRight" size={20} />
                 </button>
               </div>
@@ -173,8 +198,8 @@ const FeaturedServices = () => {
           </div>
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default FeaturedServices;

@@ -2,19 +2,21 @@ import React, { useState, useEffect } from 'react';
 import Icon from '../../../components/AppIcon';
 import Image from '../../../components/AppImage';
 import Button from '../../../components/ui/Button';
+import { useNavigate } from 'react-router-dom';
 
 const HeroSection = ({ onEmergencyClick, onAppointmentClick }) => {
   const [activeSlide, setActiveSlide] = useState(0);
+  const navigate = useNavigate();
 
   const heroSlides = [
   {
     id: 1,
-    title: "Уламжлалт, физик эмчилгээ,",
+    title: "Уламжлалт болон физик эмчилгээ",
     subtitle: "Хөдөлгөөнийг сэргээж, амьдралын чанарыг дээшлүүлнэ",
     description: "Манай физик эмчилгээний тасаг нь мэс заслын дараах сэргэлт, гэмтэл, архаг өвдөлт болон хөдөлгөөний хязгаарлалтыг бууруулахад чиглэсэн орчин үеийн арга, мэргэшсэн эмч, сэргээн засах багтайгаар үйлчилж байна.",
     image: "https://img.rocket.new/generatedImages/rocket_gen_img_15eb85677-1768075520458.png",
     imageAlt: "Modern hospital emergency room with medical equipment and professional healthcare staff in blue scrubs attending to patient",
-    cta: "Emergency Services",
+    cta: "Яаралтай тусламж",
     ctaAction: "emergency",
     bgGradient: "from-emergency/20 to-emergency/5"
   },
@@ -36,7 +38,7 @@ const HeroSection = ({ onEmergencyClick, onAppointmentClick }) => {
     description: "Манай эмнэлэг орчин үеийн дижитал рентген технологиор тоноглогдсон. Бид цээж, яс, үе мөч болон бусад эрхтний өндөр нарийвчлалтай рентген зураг авах үйлчилгээ үзүүлдэг.",
     image: "https://img.rocket.new/generatedImages/rocket_gen_img_1b94deaa5-1767104433802.png",
     imageAlt: "Modern digital X-ray machine in hospital radiology department with medical equipment and monitors",
-    cta: "Explore Wellness",
+    cta: "Дижитал рентген төрөл",
     ctaAction: "wellness",
     bgGradient: "from-secondary/20 to-secondary/5"
   }];
@@ -65,14 +67,14 @@ const HeroSection = ({ onEmergencyClick, onAppointmentClick }) => {
     const slideId = heroSlides?.[activeSlide]?.id;
     
     if (slideId === 1) {
-      // Navigate to Traditional Medicine service on services page
-      window.location.href = '/services#traditional-medicine';
+      // Navigate to Traditional Medicine service (service id: 4)
+      navigate('/services', { state: { openServiceId: 4 } });
     } else if (slideId === 2) {
       // Navigate to contact page
       window.location.href = '/contact';
     } else if (slideId === 3) {
-      // Navigate to X-ray service on services page
-      window.location.href = '/services#xray-service';
+      // Navigate to X-ray service (service id: 6)
+      navigate('/services', { state: { openServiceId: 6 } });
     }
   };
 
@@ -83,7 +85,7 @@ const HeroSection = ({ onEmergencyClick, onAppointmentClick }) => {
           <div className="order-2 lg:order-1 space-y-4 md:space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-xs md:text-sm font-semibold">
               <Icon name="Heart" size={16} />
-              <span>Trusted Healthcare Since 1985</span>
+              <span>2010 оноос хойш үйл ажилгаагаа явуулж байна</span>
             </div>
 
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">

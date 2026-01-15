@@ -18,7 +18,7 @@ const HeroSection = () => {
             </h1>
             
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              Тайхар эмнэлэгт эрүүл мэндийн үйлчилгээ нь хүний эрүүл мэндийг түрүүлэх явдал гэж бид үздэг. Манай баг орчин үеийн эмнэлгийн мэргэжилийг хүний халамжтай хослуулан таны эрүүл мэндийн аялалын бүх шатанд чинь хамт байдаг.
+              Тайхар эмнэлэгийн эрүүл мэндийн үйлчилгээ нь хүний эрүүл мэндийг нэгт тавьж эмчилгээгээ үзүүлдэг. Манай баг орчин үеийн эмнэлгийн тоног төхөөрөмжийг мэрэгжлийн эмчтэй хослуулан таны эмчилгээ хийлгэж байх хугацааны бүх шатанд хамт байдаг.
             </p>
             
             <div className="flex flex-wrap gap-4 pt-4">
@@ -57,7 +57,7 @@ const HeroSection = () => {
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-2xl aspect-[4/3]">
               <Image
-                src="https://img.rocket.new/generatedImages/rocket_gen_img_177a745dd-1766189649695.png"
+                src="https://scontent.fuln4-3.fna.fbcdn.net/v/t39.30808-6/555433694_804831135618967_5020451110579690767_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=03kiDW5x_aIQ7kNvwEyy-oY&_nc_oc=Adk8erA05jRLUWmNEj-yiFrMW94FfYP5APJr9x-mEH9FD_mOxL7KfustNDp15rUYMOc&_nc_zt=23&_nc_ht=scontent.fuln4-3.fna&_nc_gid=y_taysEZsIb4zNxAZ87F4g&oh=00_AfpQID_wTqRFgEOgo5-bCmgenNqZ--AXAfQkTcsIFjhOaQ&oe=696E5CA4"
                 alt="Тайхар эмнэлэгийн орчин үеийн барилга, мэргэжилтэн эмч нар"
                 className="w-full h-full object-cover"
                 priority={true}

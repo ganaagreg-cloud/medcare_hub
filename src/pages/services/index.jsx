@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import { useLocation } from 'react-router-dom';
 import Header from '../../components/ui/Header';
 import Breadcrumb from '../../components/ui/Breadcrumb';
 import Footer from '../../components/ui/Footer';
@@ -20,6 +21,7 @@ const Services = () => {
   const [activeTab, setActiveTab] = useState('all-services');
   const [selectedService, setSelectedService] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const location = useLocation();
 
   const services = [
   {
@@ -241,6 +243,19 @@ const Services = () => {
     ]
   };
 
+  // Handle navigation from hero section
+  useEffect(() => {
+    if (location?.state?.openServiceId) {
+      const serviceToOpen = services?.find(s => s?.id === location?.state?.openServiceId);
+      if (serviceToOpen) {
+        setSelectedService(serviceToOpen);
+        setIsModalOpen(true);
+        // Clear the state to prevent reopening on refresh
+        window.history?.replaceState({}, document.title);
+      }
+    }
+  }, [location?.state]);
+
   const handleSearch = (term) => {
     setSearchTerm(term);
   };
@@ -290,7 +305,7 @@ const Services = () => {
               <div className="max-w-3xl mt-6">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
                   <Icon name="Stethoscope" size={16} />
-                  <span>Орчин үеийнbination удирдамж</span>
+                  <span>Үйлчилгээ</span>
                 </div>
                 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
@@ -409,7 +424,7 @@ const Services = () => {
                           Манай хүлээн авалтын төвүүд таны тохирох эмчийг олох, уулзахад тусална.
                         </p>
                         <Button variant="default" iconName="Phone" iconPosition="left">
-                          Үйлчлүүлэгчтэй холбогдох
+                          Ажилтантай холбогдох
                         </Button>
                       </div>
                     </div>
@@ -492,7 +507,7 @@ const Services = () => {
                               Эрсдэлийн даац тогтоосон хүлээн авсан тусламжийн төлөвлөгөөнүүд.
                             </p>
                             <Button variant="outline" size="sm" iconName="HelpCircle" iconPosition="right">
-                              Илүү сурах
+                              Дэлгэрэнгүй
                             </Button>
                           </div>
                         </div>
@@ -509,7 +524,7 @@ const Services = () => {
                   <Icon name="Calendar" size={32} className="text-white" />
                 </div>
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
-                  Үйлчлүүлэгчийн уулзалт захиалах уу?
+                  Цаг захиалах уу?
                 </h2>
                 <p className="text-base md:text-lg text-white/90 mb-8">
                   Манай хүлээн авалтын баг 24/7 хүртэл таныг уулзах, асуултад хариулах, эмчилгээ үйлчилгээ үзүүлэхэд бэлэн байна.
@@ -531,7 +546,7 @@ const Services = () => {
                     iconPosition="left"
                     className="border-white text-white hover:bg-white/10">
 
-                    (555) 123-4567 дугаартаа залгаарай
+                    77072455 дугаартаа залгаарай
                   </Button>
                 </div>
               </div>

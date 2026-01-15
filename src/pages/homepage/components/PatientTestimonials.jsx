@@ -8,28 +8,28 @@ const PatientTestimonials = () => {
   const testimonials = [
   {
     id: 1,
-    name: "Jennifer Martinez",
+    name: "Болд",
     age: 42,
-    condition: "Cardiac Surgery Patient",
+    condition: "Сэргээн засах эмчилгнээий өвчтөн",
     image: "https://img.rocket.new/generatedImages/rocket_gen_img_1d8580d3b-1763294016344.png",
     imageAlt: "Professional headshot of Hispanic woman with shoulder-length brown hair wearing blue blouse smiling warmly at camera",
     rating: 5,
-    quote: "The cardiac care team at MedCare Hub saved my life. From the emergency room to recovery, every staff member showed exceptional skill and genuine compassion. I'm forever grateful for their expertise and the personalized attention I received throughout my treatment journey.",
-    date: "December 2025",
-    procedure: "Coronary Bypass Surgery"
+    quote: "Тайхар эмнлэгийн нөхөн сэргээх эмчилгээний баг миний эдгэрэлтийг үнэхээр өөрчилсөн. Эхний үеээс эхлээд эмчилгээний сүүлийн шат хүртэл бүх эмч, ажилтан гайхалтай мэргэжлийн ур чадвар, тэвчээр, чин сэтгэлийн туслалцаа,үйлчилгээ үзүүлсэн. Тэдний туршлага, урам зориг, хувь хүнд тохирсон нөхөн сэргээх төлөвлөгөө нь надад хүч чадал, итгэл найдвараа алхам алхмаар сэргээхэд тусалсан. Би эдгэрэх явцдаа мэдэрсэн энэрэнгүй сэтгэлд гүнээ талархаж байна.",
+    date: "2026 оны 1-р сарын 15ны өдөр",
+    procedure: "Нөхөн сэргээх эмчилгээ"
   },
   {
     id: 2,
-    name: "Robert Thompson",
+    name: "Батаа",
     age: 58,
-    condition: "Orthopedic Patient",
+    condition: "Зүрх судас",
     image: "https://img.rocket.new/generatedImages/rocket_gen_img_130504d21-1763295915180.png",
     imageAlt: "Professional headshot of Caucasian man with gray hair and beard wearing navy suit and tie with confident smile",
     rating: 5,
-    quote: "After years of chronic knee pain, the orthopedic team gave me my life back. The joint replacement surgery was seamless, and the physical therapy program was outstanding. I'm now hiking again and enjoying activities I thought were impossible. The entire experience exceeded my expectations.",
-    date: "November 2025",
-    procedure: "Total Knee Replacement"
-  },
+    quote: "Олон жилийн турш оношлогдоогүй ядаргаа болон үе үе мэдрэгдэх цээжний өвдөлтийн эцэст тайхар эмнлэгийн зүрх судасны баг надад ямар асуудал байсан талаар оношилж өгсөн. Тэдний дэвшилтэт оношилгооны шинжилгээ болон нарийн үнэлгээний ачаар миний өвчнийг эрт үед нь илрүүлсэн. Мэргэжлийн ур чадвар, хүн төвтэй байдал нь надад сэтгэлийн амар амгаланг өгсөн. Тайхар эмнлэгийн нарийн оношилгоонд би үнэхээр талархаж байна.",
+    date: "2025 оны 11-р сар",
+    procedure: "Оношилгоо"
+  }/*,
   {
     id: 3,
     name: "Maria Santos",
@@ -53,7 +53,7 @@ const PatientTestimonials = () => {
     quote: "Fighting cancer was the hardest battle of my life, but the oncology team at MedCare Hub stood by me every step of the way. Their cutting-edge treatment combined with emotional support made all the difference. I'm now cancer-free and living life to the fullest thanks to their dedication.",
     date: "October 2025",
     procedure: "Cancer Treatment"
-  }];
+  }*/];
 
 
   const handlePrevious = () => {
@@ -70,13 +70,13 @@ const PatientTestimonials = () => {
         <div className="text-center mb-8 md:mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-xs md:text-sm font-semibold mb-4">
             <Icon name="MessageSquare" size={16} />
-            <span>Patient Stories</span>
+            <span>Өвчтөний түүх</span>
           </div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3 md:mb-4">
-            Hear From Our Patients
+            Манайд эмчлүүлсэн өвчтийн  сэтгэгдэл
           </h2>
           <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
-            Real stories from real patients about their healthcare journey with us
+            Бидэнтэй хамт эрүүл мэндийн аяллаа туулсан жинхэнэ өвчтөнүүдийн бодит түүхүүд
           </p>
         </div>
 
@@ -157,7 +157,7 @@ const PatientTestimonials = () => {
 
           <div className="mt-8 md:mt-12 text-center">
             <p className="text-sm md:text-base text-muted-foreground mb-4">
-              Join thousands of satisfied patients who trust us with their healthcare
+              Манай эрүүл мэндийн үйлчилгээнд итгэдэг олон мянган сэтгэл хангалуун өвчтөнүүдтэй нэгдээрэй
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
               <div className="flex items-center gap-2">

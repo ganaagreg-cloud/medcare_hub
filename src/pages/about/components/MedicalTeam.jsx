@@ -185,7 +185,7 @@ const MedicalTeam = () => {
           </p>
           <button className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg transition-all">
             <Icon name="Calendar" size={20} />
-            <span>Цаг авах g</span>
+            <span>Цаг авах</span>
           </button>
         </div>
       </div>

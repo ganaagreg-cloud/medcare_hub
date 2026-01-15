@@ -6,32 +6,32 @@ const TrustIndicators = () => {
     {
       id: 1,
       icon: "Award",
-      title: "Joint Commission Accredited",
-      description: "Gold Seal of Approval for quality and safety",
+      title: "Хамтын комиссын баталгаажуулалт",
+      description: "Чанар, аюулгүй байдлын алтан тэмдэг",
       color: "text-yellow-600",
       bgColor: "bg-yellow-50"
     },
     {
       id: 2,
       icon: "Shield",
-      title: "HIPAA Compliant",
-      description: "Your privacy and data security guaranteed",
+      title: "HIPAA стандартад нийцсэн",
+      description: "Таны нууцлал, мэдээллийн аюулгүй байдал баталгаатай",
       color: "text-blue-600",
       bgColor: "bg-blue-50"
     },
     {
       id: 3,
       icon: "Star",
-      title: "5-Star Patient Rating",
-      description: "Consistently rated excellent by patients",
+      title: "5 одтой үнэлгээ",
+      description: "Өвчтөнүүдээс тогтмол өндөр үнэлгээ авдаг",
       color: "text-purple-600",
       bgColor: "bg-purple-50"
     },
     {
       id: 4,
       icon: "Users",
-      title: "Board-Certified Physicians",
-      description: "100% of our doctors are board-certified",
+      title: "Мэргэшсэн эмч нар",
+      description: "Манай эмч нарын 100% нь мэргэшсэн",
       color: "text-green-600",
       bgColor: "bg-green-50"
     }
@@ -41,25 +41,25 @@ const TrustIndicators = () => {
     {
       id: 1,
       value: "50,000+",
-      label: "Patients Served Annually",
+      label: "Жилд үйлчлүүлсэн өвчтөн",
       icon: "Users"
     },
     {
       id: 2,
       value: "98%",
-      label: "Patient Satisfaction Rate",
+      label: "Өвчтөний сэтгэл ханамжийн түвшин",
       icon: "ThumbsUp"
     },
     {
       id: 3,
       value: "24/7",
-      label: "Emergency Care Available",
+      label: "Яаралтай тусламж үйлчилгээ",
       icon: "Clock"
     },
     {
       id: 4,
       value: "150+",
-      label: "Medical Specialists",
+      label: "Эмнэлгийн мэргэжилтэн",
       icon: "Stethoscope"
     }
   ];
@@ -70,13 +70,13 @@ const TrustIndicators = () => {
         <div className="text-center mb-8 md:mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-trust-builder/10 text-trust-builder text-xs md:text-sm font-semibold mb-4">
             <Icon name="ShieldCheck" size={16} />
-            <span>Trusted Healthcare Provider</span>
+            <span>Итгэлтэй эрүүл мэндийн үйлчилгээ</span>
           </div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3 md:mb-4">
-            Quality Care You Can Trust
+            Итгэж болох чанартай үйлчилгээ
           </h2>
           <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
-            Recognized for excellence in patient care, safety standards, and medical innovation
+            Өвчтөний тусламж, аюулгүй байдлын стандарт, эмнэлгийн шинэчлэлд тэргүүлэгч гэж хүлээн зөвшөөрөгдсөн
           </p>
         </div>
 
@@ -126,10 +126,10 @@ const TrustIndicators = () => {
               </div>
               <div>
                 <h3 className="text-lg md:text-xl font-bold text-foreground mb-1">
-                  Award-Winning Healthcare
+                  Тэргүүний эмнэлэг
                 </h3>
                 <p className="text-sm md:text-base text-muted-foreground">
-                  Recognized nationally for excellence in patient care and medical innovation
+                  Үндэсний хэмжээнд өвчтөний асаргаа болон физик эмчилгээний чиглэлээр тэргүүлэгч шагналт эрүүл мэндийн үйлчилгээ
                 </p>
               </div>
             </div>

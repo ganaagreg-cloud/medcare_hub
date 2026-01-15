@@ -48,14 +48,14 @@ const SpecialtySection = ({ specialty }) => {
             <div>
               <div className="flex items-center gap-2 mb-1">
                 <Icon name="Users" size={18} className="text-primary" />
-                <span className="text-xs text-muted-foreground">Specialists</span>
+                <span className="text-xs text-muted-foreground">Мэрэгжил</span>
               </div>
               <p className="text-lg font-semibold text-foreground">{specialty?.specialists}</p>
             </div>
             <div>
               <div className="flex items-center gap-2 mb-1">
                 <Icon name="Award" size={18} className="text-primary" />
-                <span className="text-xs text-muted-foreground">Experience</span>
+                <span className="text-xs text-muted-foreground">Туршлага</span>
               </div>
               <p className="text-lg font-semibold text-foreground">{specialty?.experience}</p>
             </div>

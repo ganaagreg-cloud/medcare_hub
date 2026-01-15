@@ -15,8 +15,8 @@ const Header = () => {
       label: 'Бидний тухай',
       icon: 'Users',
       dropdown: [
-        { path: '/about#director', label: 'Захирлын мэндчилгээ' },
         { path: '/about', label: 'Эмнэлгийн танилцуулга' },
+        { path: '/about#director', label: 'Захирлын мэндчилгээ' },
         { path: '/about#journey', label: 'Бидний түүх' },
         { path: '/about#experts', label: 'Манай мэрэгжилтэн' },
         { path: '/about#awards', label: 'Шагнал' },

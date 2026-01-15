@@ -8,13 +8,13 @@ const ServiceSearch = ({ onSearch, onFilterChange }) => {
   const [selectedCategory, setSelectedCategory] = useState('');
 
   const categories = [
-    { value: '', label: 'All Services' },
-    { value: 'emergency', label: 'Emergency Care' },
-    { value: 'primary', label: 'Primary Care' },
-    { value: 'specialist', label: 'Specialist Care' },
-    { value: 'diagnostic', label: 'Diagnostic Services' },
-    { value: 'surgical', label: 'Surgical Services' },
-    { value: 'wellness', label: 'Wellness Programs' }
+    { value: '', label: 'Бүх эмчилгээ' },
+    { value: 'emergency', label: 'Яаралтай тусламж' },
+    { value: 'primary', label: 'Асаргаа' },
+    { value: 'specialist', label: 'Сэргээн засах' },
+    { value: 'diagnostic', label: 'Оношилгоо' },
+    { value: 'surgical', label: 'Мэс засал' },
+    { value: 'wellness', label: 'Уламжлалт эмчилгээ' }
   ];
 
   const handleSearchChange = (e) => {
@@ -33,8 +33,8 @@ const ServiceSearch = ({ onSearch, onFilterChange }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="relative">
           <Input
-            type="search"
-            placeholder="Search services, conditions, or symptoms..."
+            type="хайх"
+            placeholder="Эмчилгээ хайх"
             value={searchTerm}
             onChange={handleSearchChange}
             className="pl-10"
@@ -47,7 +47,7 @@ const ServiceSearch = ({ onSearch, onFilterChange }) => {
         </div>
 
         <Select
-          placeholder="Filter by category"
+          placeholder="Төрлөөр шүүх"
           options={categories}
           value={selectedCategory}
           onChange={handleCategoryChange}
@@ -56,19 +56,19 @@ const ServiceSearch = ({ onSearch, onFilterChange }) => {
 
       <div className="mt-4 flex flex-wrap gap-2">
         <button className="px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-medium hover:bg-primary/20 transition-colors">
-          Heart Disease
+          Зүрх судас
         </button>
         <button className="px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-medium hover:bg-primary/20 transition-colors">
-          Diabetes Care
+          Асаргаа,сувилгаа
         </button>
         <button className="px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-medium hover:bg-primary/20 transition-colors">
-          Cancer Treatment
+          Сэргээн засах
         </button>
         <button className="px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-medium hover:bg-primary/20 transition-colors">
-          Orthopedics
+          Уламжлалт
         </button>
         <button className="px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-medium hover:bg-primary/20 transition-colors">
-          Women's Health
+          Мэдрэлийн Оношилгоо
         </button>
       </div>
     </div>
